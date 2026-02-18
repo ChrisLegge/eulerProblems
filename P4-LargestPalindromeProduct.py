@@ -3,9 +3,6 @@
 
 import math
 
-a = 999
-b = 999
-palendrome = False
 value = 0
 
 def isPaldendrome(num):
@@ -22,15 +19,10 @@ def isPaldendrome(num):
                 return False
     return True
 
-while palendrome == False:
-    if isPaldendrome(a*b):
-        if a*b > value:
-            value = a*b
-    else:
-        a -= 1
-        if a == 0:
-            b -= 1
-            a = 999
-            if b == 0:
-                palendrome = True
-print(a, b, value)
+for a in range(999, 99, -1):
+    for b in range(a, 99, -1):
+        product = a * b
+        if product > value and isPaldendrome(product):
+            value = product
+
+print(value)
