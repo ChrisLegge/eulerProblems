@@ -10,7 +10,7 @@ value = 0
 
 def isPaldendrome(num):
     numArr = list(map(int, str(num)))
-    for i in range(math.floor(len(numArr))):
+    for i in range(math.floor(len(numArr)/2)):
         if len(numArr) == 0:
             return False
         else:
@@ -24,7 +24,6 @@ def isPaldendrome(num):
 
 while palendrome == False:
     if isPaldendrome(a*b):
-        print(a, b, a*b)
         if a*b > value:
             value = a*b
     else:
@@ -34,3 +33,4 @@ while palendrome == False:
             a = 999
             if b == 0:
                 palendrome = True
+print(a, b, value)
