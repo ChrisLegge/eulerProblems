@@ -11,6 +11,7 @@
 #            ans = num
 #print(ans)
 
+
 n = 600851475143
 factor = 2
 while factor * factor <= n:
